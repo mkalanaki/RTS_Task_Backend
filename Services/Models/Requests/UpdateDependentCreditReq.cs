@@ -45,7 +45,7 @@ namespace Application.Models.Requests
             RuleFor(o => o.TotalAmount)
                 .Cascade(CascadeMode = CascadeMode.Continue)
                 .NotNull()
-                .GreaterThan(0)
+                .LessThan(0)
                 .WithMessage("The totalAmount is not valid");
 
 
